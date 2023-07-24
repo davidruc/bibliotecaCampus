@@ -4,6 +4,7 @@ import appCliente from './routers/cliente.js';
 import appAutores from "./routers/autores.js";
 import appCategorias from "./routers/categorias.js";
 import appEditoriales from "./routers/editoriales.js";
+import appEstado from "./routers/estado.js";
 
 dotenv.config();
 const appExpress = express();
@@ -13,6 +14,7 @@ appExpress.use("/campus", appCliente);
 appExpress.use("/autores", appAutores);
 appExpress.use("/categorias", appCategorias);
 appExpress.use("/editoriales", appEditoriales);
+appExpress.use("/estado", appEstado);
 
 
 
