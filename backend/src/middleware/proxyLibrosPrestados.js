@@ -5,8 +5,8 @@ import {validate} from "class-validator";
 import {parametros} from "./../controller/parametros.js"
 import { jwtVerify } from "jose";
 
-const proxyPrestamos = express();
-proxyPrestamos.use(async(req, res, next)=>{
+const proxyLibrosPrestados = express();
+proxyLibrosPrestados.use(async(req, res, next)=>{
     try{
         //La entrada de los datos debe ser el mismo de la sesión por lo que se cambia el req.cookies ya que si no se hace de esta forma genera conflicto con la persistencia de las cookies.
         const jwt = req.session.jwt;
@@ -31,4 +31,4 @@ proxyPrestamos.use(async(req, res, next)=>{
     }
 })
 
-export default proxyPrestamos;
+export default proxyLibrosPrestados;

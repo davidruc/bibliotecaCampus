@@ -34,7 +34,7 @@ appPrestamo.use((req,res,next)=>{
     next();
 });
 
-appPrestamo.get("/:id?", proxyPrestamos,async(req,res)=>{
+appPrestamo.get("/:id?", proxyPrestamos ,async(req,res)=>{
     const jwt = req.session.jwt; 
     const encoder = new TextEncoder();  
     const jwtData = await jwtVerify(
