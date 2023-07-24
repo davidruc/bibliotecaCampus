@@ -9,18 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { Expose, Transform } from 'class-transformer';
 import { IsInt } from 'class-validator';
-export class User {
-    constructor(ID, nom_com, ema, direc, apll) {
-        this.id_usuario = ID;
+export class Autor {
+    constructor(ID, nom_com, nacionalidad, apll) {
+        this.id_autor = ID;
         this.nombre = nom_com;
         this.apellido = apll;
-        this.direccion = direc;
-        this.email = ema;
+        this.nacionalidad = nacionalidad;
     }
 }
 __decorate([
     IsInt(),
-    Expose({ name: 'id_usuario' }),
+    Expose({ name: 'id_autor' }),
     Transform(({ value }) => {
         if (/^[0-9]+$/.test(value) || typeof value == "undefined")
             return (value);
@@ -28,7 +27,7 @@ __decorate([
             throw { status: 400, message: "el dato del id ingresado es incorrecto, ingresa un número entero" };
     }, { toClassOnly: true }),
     __metadata("design:type", Number)
-], User.prototype, "id_usuario", void 0);
+], Autor.prototype, "id_autor", void 0);
 __decorate([
     Expose({ name: "nombre" }),
     Transform(({ value }) => { if (/^[a-z A-Z áéíóúÁÉÍÓÚñÑüÜ]+$/.test(value))
@@ -36,7 +35,7 @@ __decorate([
     else
         throw { status: 400, message: `El dato nombre de la mascota incumple los parametros acordados` }; }, { toClassOnly: true }),
     __metadata("design:type", String)
-], User.prototype, "nombre", void 0);
+], Autor.prototype, "nombre", void 0);
 __decorate([
     Expose({ name: "apellido" }),
     Transform(({ value }) => { if (/^[a-z A-Z áéíóúÁÉÍÓÚñÑüÜ]+$/.test(value))
@@ -44,28 +43,12 @@ __decorate([
     else
         throw { status: 400, message: `El dato nombre de la mascota incumple los parametros acordados` }; }, { toClassOnly: true }),
     __metadata("design:type", String)
-], User.prototype, "apellido", void 0);
+], Autor.prototype, "apellido", void 0);
 __decorate([
-    Expose({ name: "direccion" }),
+    Expose({ name: "nacionalidad" }),
     Transform(({ value }) => { if (/^[a-z A-Z áéíóúÁÉÍÓÚñÑüÜ]+$/.test(value))
         return value;
     else
         throw { status: 400, message: `El dato nombre de la mascota incumple los parametros acordados` }; }, { toClassOnly: true }),
     __metadata("design:type", String)
-], User.prototype, "direccion", void 0);
-__decorate([
-    Expose({ name: "telefono" }),
-    Transform(({ value }) => { if (/^[a-z A-Z áéíóúÁÉÍÓÚñÑüÜ]+$/.test(value))
-        return value;
-    else
-        throw { status: 400, message: `El dato nombre de la mascota incumple los parametros acordados` }; }, { toClassOnly: true }),
-    __metadata("design:type", String)
-], User.prototype, "telefono", void 0);
-__decorate([
-    Expose({ name: "email" }),
-    Transform(({ value }) => { if (/^[a-z A-Z áéíóúÁÉÍÓÚñÑüÜ]+$/.test(value))
-        return value;
-    else
-        throw { status: 400, message: `El dato nombre de la mascota incumple los parametros acordados` }; }, { toClassOnly: true }),
-    __metadata("design:type", String)
-], User.prototype, "email", void 0);
+], Autor.prototype, "nacionalidad", void 0);
