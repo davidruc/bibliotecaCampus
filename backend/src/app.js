@@ -6,6 +6,7 @@ import appCategorias from "./routers/categorias.js";
 import appEditoriales from "./routers/editoriales.js";
 import appEstado from "./routers/estado.js";
 import appLibros from "./routers/libros.js";
+import appPrestamo from "./routers/prestamos.js";
 
 dotenv.config();
 const appExpress = express();
@@ -17,6 +18,7 @@ appExpress.use("/categorias", appCategorias);
 appExpress.use("/editoriales", appEditoriales);
 appExpress.use("/estado", appEstado);
 appExpress.use("/libros", appLibros);
+appExpress.use("/prestamo", appPrestamo)
 
 
 

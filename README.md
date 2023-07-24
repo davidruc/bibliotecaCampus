@@ -8,4 +8,6 @@
     * Este endPoint es un get.
 5. EndPoint que muestra todos los libros con su título, autor y editorial: *http://127.10.16.15:5020/libros*
     * Este endPoint es un get.
-6. 
+6. EndPoint que lista todos los prestamos realizados con fecha de préstamo, fecha de devolución y estado del prestamo *http://127.10.16.15:5020/prestamo*
+    * Este endPoint es un get.
+7. 
