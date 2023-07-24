@@ -10,4 +10,4 @@
     * Este endPoint es un get.
 6. EndPoint que lista todos los prestamos realizados con fecha de préstamo, fecha de devolución y estado del prestamo *http://127.10.16.15:5020/prestamo*
     * Este endPoint es un get.
-7. 
+7. EndPoint que muestra todas las reservas realizadas con su fecha de reserva y estado: *http://127.10.16.15:5020/reservas* 
