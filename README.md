@@ -6,3 +6,6 @@
     * Este endPoint es un get.
 4. EndPoint para mostrar los estados de los libros y su descripción: *http://127.10.16.15:5020/estado*
     * Este endPoint es un get.
+5. EndPoint que muestra todos los libros con su título, autor y editorial: *http://127.10.16.15:5020/libros*
+    * Este endPoint es un get.
+6. 
